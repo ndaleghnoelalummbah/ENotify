@@ -26,8 +26,10 @@ const styles = StyleSheet.create({
   },
   menu: {
     marginTop: 18,
-    height: 26,
-    width: 6,
+    fontSize: 24,
+    // height: 26,
+    // width: 6,
+    color: "#fff",
   },
 });
 export default styles;

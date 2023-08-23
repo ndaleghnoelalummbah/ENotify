@@ -2,16 +2,19 @@ import { StyleSheet, Text, Image, View, TouchableOpacity, KeyboardAvoidingView }
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
+import { Entypo } from "@expo/vector-icons";
 import styles from "./styles";
 import { TextInput } from "react-native";
-type RootStackParamList = {
-  Home: undefined;
-};
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { StackParamList } from "../../Navigation/StackNavigation";
+// type RootStackParamList = {
+//   Home: undefined;
+// };
 
-type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
+// type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, "Home">;
 
-const Login: React.FC = () => {
-  const navigation = useNavigation<HomeScreenNavigationProp>();
+const Login = ({ route, navigation }: NativeStackScreenProps<StackParamList, "Login">) => {
+  // const navigation = useNavigation<HomeScreenNavigationProp>();
 
   const handleLogin = () => {
     navigation.replace("Home");
@@ -30,7 +33,8 @@ const Login: React.FC = () => {
         <Image source={require("../../images/passwd.png")} style={styles.lock} />
         <View style={styles.passwd}>
           <TextInput placeholder="Password" secureTextEntry style={styles.PasswdText} />
-          <Image source={require("../../images/eye.png")} style={styles.eyeIcon} />
+          {/* <Image source={require("../../images/eye.png")} style={styles.eyeIcon} /> */}
+          <Entypo name="eye-with-line" size={24} style={styles.eyeIcon} />
         </View>
       </View>
       <View style={styles.buttonContainer}>

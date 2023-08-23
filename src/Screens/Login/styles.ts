@@ -77,10 +77,8 @@ const styles = StyleSheet.create({
     height: 40,
   },
   eyeIcon: {
-    width: 26,
-    height: 20,
-
-    marginTop: 8,
+   fontSize:24,
+  //     marginTop: 8,
   },
 });
 export default styles;
